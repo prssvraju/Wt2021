@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script>
+            function makerequest()
+            {
+                // Strat of Setp -2 
+                try
+                {
+                    xmlReq = new XMLHttpRequest();
+                }
+                catch(e)
+                {
+                    alert("Your browser dose not support ajax");
+                }
+                // end of Setp -2 
+                // Set - 3
+                xmlReq.onreadystatechange = function()
+                {
+                    if(xmlReq.readyState == 4)
+                    {
+                        processHtml(xmlReq.responseText)
+                    }
+                }
+                // Set - 4
+                xmlReq.open("GET","http://192.168.64.2/srkr/server.php",true);
+                // Set - 5
+                xmlReq.send(null);       
+            }
+            // Set - 6
+            function processHtml(res)
+            {
+                document.getElementById("response").innerHTML = res;
+            }
+        </script>
+    </head>
+    <body>
+        <!--Setp -1 -->
+        <input type="button" value="call Ajax" onclick="makerequest()">
+        <p id="response"></p>
+    </body>
+</html>
