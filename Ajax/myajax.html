@@ -3,7 +3,7 @@
         <script>
             function makerequest()
             {
-                // Strat of Setp -2 
+                // Strat of Step -2 
                 try
                 {
                     xmlReq = new XMLHttpRequest();
@@ -12,8 +12,8 @@
                 {
                     alert("Your browser dose not support ajax");
                 }
-                // end of Setp -2 
-                // Set - 3
+                // end of Step -2 
+                // Step - 3
                 xmlReq.onreadystatechange = function()
                 {
                     if(xmlReq.readyState == 4)
@@ -21,12 +21,12 @@
                         processHtml(xmlReq.responseText)
                     }
                 }
-                // Set - 4
+                // Step - 4
                 xmlReq.open("GET","http://192.168.64.2/srkr/server.php",true);
-                // Set - 5
+                // Step - 5
                 xmlReq.send(null);       
             }
-            // Set - 6
+            // Step - 6
             function processHtml(res)
             {
                 document.getElementById("response").innerHTML = res;
@@ -34,7 +34,7 @@
         </script>
     </head>
     <body>
-        <!--Setp -1 -->
+        <!--Step -1 -->
         <input type="button" value="call Ajax" onclick="makerequest()">
         <p id="response"></p>
     </body>
