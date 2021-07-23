@@ -1,0 +1,12 @@
+1.opne xamp
+2.check wether apache (http server) and Mysql is in running state or not
+ and open http://localhost/phpmyadmin
+3. create a database(srkr)
+    select new in top left -> give and select create
+4.After cerating db we see db name(student) in tree visible in left portion
+5.Here we can create table so select table name and number of coloums -> select GO button
+6.Now we can name the coloums and provide data types of colums and enter length of coloums-> and click save
+7.Create a new porject(crud) in htdocs(c:\xamp\htdocs) and cerate a insert.php
+8.write insert data into php (code)
+9.run the code in browser 
+    http://localhost/crud/insert.php
